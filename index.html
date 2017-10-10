@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<style type="text/css">
-	
+
 	
 	h1{
 		position: absolute;
@@ -105,6 +105,15 @@
 	
 	
 	</style>
+		<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Campo Nome é obrigatório");
+        return false;
+    }
+}
+	</script>
 </head>
 <body>
 	<div class="area1">
@@ -119,31 +128,38 @@
 		</nav>
 	</div>
 	<h1>Cadastro de Visitantes</h1>
+	<!-- não tive tempo de colocar no lugar -->
 	<div class="Formulario">
-		<div class="nome-visitante">
-			<label><h6>Nome:</h6> <input type="text" placeholder="Nome Completo" maxlength=50 size="45"></label>
-		</div>
-		<div class="rg-visitante">
-			<label><h6>RG:</h6> <input type="text" placeholder="00000000-0" maxlength=10 size="21"></label>
-		</div>
-		<div class="horario">
-			<label><h6>Horario:</h6> <input type="text" placeholder="00:00" maxlength=5 size="10"></label>
-		</div>
-		<div class="campo_data">
-			<label><h6>Data da Visita:</h6> <input type="date" id="data" name="data" placeholder="18/05/2012" maxlength=10></label>
-		</div>
-		</div class="motivo">
-			<label class="motivo"><h6>Motivo:</h6><textarea class="motivo" type="text" rows="10" cols="90" size="50" maxlength="700"></textarea></label>
-		</div>
-	</div>
+		<form name="myForm" action="/action_page_post.php"
+onsubmit="return validateForm()" method="post">
+			<div class="nome-visitante">
+				<label><h6>Nome:</h6> <input name="fname" type="text" placeholder="Nome Completo" maxlength=50 size="45"></label>
+			</div>
+			<div class="rg-visitante">
+				<label><h6>RG:</h6> <input name="" type="text" placeholder="00000000-0" maxlength=10 size="21"></label>
+			</div>
+			<div class="horario">
+				<label><h6>Horario:</h6> <input type="text" placeholder="00:00" maxlength=5 size="10"></label>
+			</div>
+			<div class="campo_data">
+				<label><h6>Data da Visita:</h6> <input type="date" id="data" name="data" placeholder="18/05/2012" maxlength=10></label>
+			</div>
+			<div class="motivo">
+				<label class="motivo"><h6>Motivo:</h6><textarea class="motivo" type="text" rows="10" cols="90" size="50" maxlength="700"></textarea></label>
+			</div>
+		
+	
 	
 
-	<div class="botao_prontocancelar">
-		<input id="botaopronto" type="submit" value="Pronto">
-		<input type="submit" value="Cancelar">
+			<div class="botao_prontocancelar">
+				<input id="botaopronto" type="submit" value="Pronto">
+				<input type="submit" value="Cancelar">
+			</div>
+		</form>
 	</div>
 
 </body>
+
 </html>
 
 
