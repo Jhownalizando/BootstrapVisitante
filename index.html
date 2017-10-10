@@ -44,10 +44,43 @@
     color: #6D6D6D;
     border-bottom:3px solid #0000FF;
 }
-	/*naum lembro*/
+		
+	}
 	.moradores {
 		border: 1px solid #ccc;
 	}
+	
+	#datas {
+		display: inline;
+	}
+	
+	
+	/*botoes embaixo*/
+	.botao_prontocancelar{
+		position: absolute;
+		margin-left: 85.3%;
+		margin-top: 40%;
+	}
+	/*cor do botao*/
+	#botaopronto{
+		background-color: #74DF00;
+	}
+	
+	.botao_prontocancelar input{
+		height: 30px;
+	}
+
+	/* linha do menu*/
+	.area1 {
+		border: 15px solid black;
+		
+	}
+
+	/*objeto orientado a Gambiarra*/
+	.nome-visitante .rg-visitante .campo_data .motivo .horario {
+		position: absolute;
+	}
+
 	/*campo nome visitante*/
 	.nome-visitante {
 		position: absolute;
@@ -60,29 +93,11 @@
 		margin-left:5% ;
 		margin-top:13% ;
 	}
-
-	#datas {
-		display: inline;
-	}
 	/*campo data*/
 	.campo_data{
 		position: absolute;
 		margin-top: 19%;
 		margin-left: 5%;
-	}
-	/*botoes embaixo*/
-	.botao_prontocancelar{
-		height: 30px;
-		margin-left: 85.3%;
-		margin-top: 40%;
-	}
-	/*cor do botao*/
-	#botaopronto{
-		background-color: #74DF00;
-	}
-	
-	.botao_prontocancelar input{
-		height: 30px;
 	}
 	/*Campo horario*/
 	.horario {
@@ -96,16 +111,10 @@
 		margin-top: 8.5%;
 		margin-left: 31%;
 	}
-
-	/* linha do menu*/
-	.area1 {
-		border: 15px solid black;
-		
-	}
 	
 	
 	</style>
-		<script>
+<script>
 function validateForm() {
     var x = document.forms["myForm"]["fname"].value;
     if (x == "") {
@@ -130,8 +139,7 @@ function validateForm() {
 	<h1>Cadastro de Visitantes</h1>
 	<!-- não tive tempo de colocar no lugar -->
 	<div class="Formulario">
-		<form name="myForm" action="/action_page_post.php"
-onsubmit="return validateForm()" method="post">
+		<form name="myForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
 			<div class="nome-visitante">
 				<label><h6>Nome:</h6> <input name="fname" type="text" placeholder="Nome Completo" maxlength=50 size="45"></label>
 			</div>
@@ -147,10 +155,6 @@ onsubmit="return validateForm()" method="post">
 			<div class="motivo">
 				<label class="motivo"><h6>Motivo:</h6><textarea class="motivo" type="text" rows="10" cols="90" size="50" maxlength="700"></textarea></label>
 			</div>
-		
-	
-	
-
 			<div class="botao_prontocancelar">
 				<input id="botaopronto" type="submit" value="Pronto">
 				<input type="submit" value="Cancelar">
