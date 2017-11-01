@@ -1,189 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="Bootstrap Basico" />
-	<meta name="" content="width=device-width, initial-scale=1" />
-	<title>Bootstrap Basico</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<style type="text/css">
+    <meta charset="utf-8">
+    <meta name="description" content="Sistema Condominio" />
+    <meta name="" content="width=device-width, initial-scale=1" />
+    <title>Sistema Condominio</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-	/*Cadastro de visitantes*/
-	h1{
-		position: absolute;
-		margin-left: 35%;
-		margin-top: 3%;
-	}
-	/*posição do menu*/
-	.menu ul {
-    list-style:none;
-    position: absolute;
-    margin-left: 30%;
-	margin-top: -1%;
-
-}
-	.menu ul li { 
-		display: inline;
-	 }
-
-	.menu ul li a {
-    padding: 2px 10px;
-    display: inline-block;
-
-    /* visual do menu */
-    background-color:#000000;
-    color: #ffffff;
-    text-decoration: none;
-    border-bottom:3px solid #909090;
-}
-	
-    .menu ul li a:hover {
-    background-color:#D6D6D6;
-    color: #6D6D6D;
-    border-bottom:3px solid #0000FF;
-}
-		
-	}
-	.moradores {
-		border: 1px solid #ccc;
-	}
-	
-	#datas {
-		display: inline;
-	}
-	
-	
-	/*botoes embaixo*/
-	#botaocancelar{
-		position: absolute;
-		margin-left: 81.2%;
-		margin-top: 35%;
-	}
-	
-	#botaoconfirmar{
-		position: absolute;
-		margin-top: 35%;
-		margin-left: 73.8%;
-	}
-	
-	.botao_confirmarcancelar input{
-		height: 30px;
-	}
-
-	/* linha do menu*/
-	.area1 {
-		border: 15px solid black;
-		
-	}
-
-	/*objeto orientado a Gambiarra*/
-	.nome-visitante .rg-visitante .campo_data .motivo .horario {
-		position: absolute;
-	}
-
-	/*campo nome visitante*/
-	.nome-visitante {
-		position: absolute;
-		margin-left:12% ;
-		margin-top:9% ;
-	}
-	/*campo rg*/
-	.rg-visitante {
-		position: absolute;
-		margin-left:12% ;
-		margin-top:13% ;
-	}
-	/*campo data*/
-	.campo_data{
-		position: absolute;
-		margin-top: 19%;
-		margin-left: 12%;
-	}
-	/*Campo horario*/
-	.horario {
-		position: absolute;
-		margin-top: 19%;
-		margin-left: 26.5%;
-	}
-	/*Campo motivo*/
-	.motivo  {
-		position: absolute;
-		margin-top: 8.5%;
-		margin-left: 38.5%;
-	}
-	
-	
-	</style>
-	<script>
-		function validateForm() {
-		    var nome = document.forms["formvisitante"]["fname"].value;
-		    var rg = document.forms["formvisitante"]["fRG"].value;
-		    var horario = document.forms["formvisitante"]["fhorario"].value;
-		    var data = document.forms["formvisitante"]["fdata"].value;
-		    var motivo = document.forms["formvisitante"]["fmotivo"].value;
-		    if (nome == "" || rg =="" || horario == "" || data =="" || motivo =="") {
-		        alert("Todos os campos são obrigatórios.");
-		        return false;
-		    } 
-		   if(nome != "" && rg !="" && horario != "" && data !="" && motivo !="") {
-		   		alert("Visita Confirmada com sucesso.");
-		   		return true;
-		   }
-		}
-		function cancelForm(){
-			alert ("Visita cancelada com sucesso.");
-		}
-		
-	</script>
-
+    </style>
+    <script>
+        function validateForm() {
+            var nome = document.forms["formvisitante"]["fname"].value;
+            var rg = document.forms["formvisitante"]["fRG"].value;
+            var horario = document.forms["formvisitante"]["fhorario"].value;
+            var data = document.forms["formvisitante"]["fdata"].value;
+            var motivo = document.forms["formvisitante"]["fmotivo"].value;
+            if (nome == "" || rg =="" || horario == "" || data =="" || motivo =="") {
+                alert("Todos os campos são obrigatórios.");
+                return false;
+            }
+            if(nome != "" && rg !="" && horario != "" && data !="" && motivo !="") {
+                alert("Visita Confirmada com sucesso.");
+                return true;
+            }
+        }
+        function cancelForm(){
+            alert ("Visita cancelada com sucesso.");
+        }
+    </script>
 </head>
 <body>
-	<div class="area1">
-		<nav class="menu">
-		    <ul>
-		        <li><a href="#">Moradores</a></li>
-		        <li><a href="#">Entregas</a></li>
-		        <li><a href="#">Reclamações</a></li>
-		        <li><a href="#">Visitantes</a></li>
-		        <li><a href="#">Infrações</a></li>
-		    </ul>
-		</nav>
-	</div>
-	<h1>Cadastro de Visitantes</h1>
-	<!-- bagunça -->
-	<div class="Formulario">
-		<form name="formvisitante" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
-			<div class="nome-visitante">
-				<label><h6>Nome:</h6> <input name="fname" type="text" placeholder="Nome Completo" maxlength=50 size="45"></label>
-			</div>
-			<div class="rg-visitante">
-				<label><h6>RG:</h6> <input name="fRG" type="text" placeholder="00000000-0" maxlength=10 size="21"></label>
-			</div>
-			<div class="horario">
-				<label><h6>Horario:</h6> <input name="fhorario" type="text" placeholder="00:00" maxlength=5 size="10"></label>
-			</div>
-			<div class="campo_data">
-				<label><h6>Data da Visita:</h6> <input type="date" name="fdata" name="data" placeholder="18/05/2012" maxlength=10></label>
-			</div>
-			<div class="motivo">
-				<label class="motivo"><h6>Motivo:</h6><textarea class="motivo" name="fmotivo" type="text" rows="10" cols="90" size="50" placeholder="Visita a amigo." maxlength="700"></textarea></label>
-			</div>
-			<div class="botao_confirmarcancelar">
-				<form name="formconfirmar" action="/action_page_post.php" method="post">
-					<input id="botaoconfirmar" class="btn btn-primary" type="submit" value="Confirmar">
-				</form>
-				<form name="formcancelar" action="/action_page_post.php" method="post">
-					<input id="botaocancelar" class="btn btn-danger" onclick=" return cancelForm()" type="reset" value="Cancelar">
-				</form>
-			</div>
-		</form>
-	</div>
-
+<div class="area1">
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Moradores</a></li>
+            <li><a href="#">Entregas</a></li>
+            <li><a href="#">Reclamações</a></li>
+            <li><a href="#">Visitantes</a></li>
+            <li><a href="#">Infrações</a></li>
+        </ul>
+    </nav>
+</div>
+<h1>Cadastro de Visitantes</h1>
+<!-- bagunça -->
+<div class="Formulario">
+    <form name="formvisitante" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
+        <div class="nome-visitante">
+            <label><h6>Nome:</h6> <input name="fname" type="text" placeholder="Nome Completo" maxlength=50 size="45"></label>
+        </div>
+        <div class="rg-visitante">
+            <label><h6>RG:</h6> <input name="fRG" type="text" placeholder="00000000-0" maxlength=10 size="21"></label>
+        </div>
+        <div class="horario">
+            <label><h6>Horario:</h6> <input name="fhorario" type="time" placeholder="00:00" maxlength=5 size="10"></label>
+        </div>
+        <div class="campo_data">
+            <label><h6>Data da Visita:</h6> <input type="date" name="fdata" name="data" placeholder="18/05/2012" maxlength=10></label>
+        </div>
+        <div class="motivo">
+            <label class="motivo"><h6>Motivo:</h6><textarea class="motivo" name="fmotivo" type="text" rows="10" cols="90" size="50" placeholder="Visita a amigo." maxlength="700"></textarea></label>
+        </div>
+        <div class="botao_confirmarcancelar">
+            <form name="formconfirmar" action="/action_page_post.php" method="post">
+                <input id="botaoconfirmar" class="btn btn-primary" type="submit" value="Confirmar">
+            </form>
+            <form name="formcancelar" action="/action_page_post.php" method="post">
+                <input id="botaocancelar" class="btn btn-danger" onclick=" return cancelForm()" type="reset" value="Cancelar">
+            </form>
+        </div>
+    </form>
+</div>
 </body>
 
 </html>
-
-
