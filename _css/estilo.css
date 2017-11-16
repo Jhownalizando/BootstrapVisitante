@@ -48,14 +48,14 @@
         /*botoes embaixo*/
         #botaocancelar{
             position: absolute;
-            margin-left: 81.2%;
+            margin-left: 80.9%;
             margin-top: 35%;
         }
 
         #botaoconfirmar{
             position: absolute;
             margin-top: 35%;
-            margin-left: 73.8%;
+            margin-left: 72.8%;
         }
 
         .botao_confirmarcancelar input{
@@ -83,7 +83,7 @@
         .rg-visitante {
             position: absolute;
             margin-left:12% ;
-            margin-top:13% ;
+            margin-top:14% ;
         }
         /*campo data*/
         .campo_data{
@@ -95,11 +95,11 @@
         .horario {
             position: absolute;
             margin-top: 19%;
-            margin-left: 26.5%;
+            margin-left: 27%;
         }
         /*Campo motivo*/
         .motivo  {
             position: absolute;
-            margin-top: 8.5%;
-            margin-left: 38.5%;
+            margin-top: 9%;
+            margin-left: 36.5%;
         }

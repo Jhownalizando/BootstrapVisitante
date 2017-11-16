@@ -38,11 +38,11 @@
 <div class="area1">
     <nav class="menu">
         <ul>
-            <li><a href="#">Moradores</a></li>
+            <li><a href="cadastrarMoradores.html">Moradores</a></li>
             <li><a href="#">Entregas</a></li>
             <li><a href="#">Reclamações</a></li>
             <li><a href="#">Visitantes</a></li>
-            <li><a href="Infracoes.html">Ocorrências</a></li>
+            <li><a href="ocorrencias.html">Ocorrências</a></li>
         </ul>
     </nav>
 </div>
@@ -51,7 +51,7 @@
 <div class="Formulario">
     <form name="formvisitante" action="/action_page_post.php" onsubmit="return validateForm()" method="post">
         <div class="nome-visitante">
-            <label><h6>Nome:</h6> <input name="fname" type="text" placeholder="Nome Completo" maxlength=50 size="45"></label>
+            <label><h6>Nome:</h6> <input name="fname" type="text" placeholder="Nome Completo" maxlength=50 size="35"></label>
         </div>
         <div class="rg-visitante">
             <label><h6>RG:</h6> <input name="fRG" type="text" placeholder="00000000-0" maxlength=10 size="21"></label>
@@ -63,7 +63,7 @@
             <label><h6>Data da Visita:</h6> <input type="date" name="fdata" name="data" placeholder="18/05/2012" maxlength=10></label>
         </div>
         <div class="motivo">
-            <label class="motivo"><h6>Motivo:</h6><textarea class="motivo" name="fmotivo" type="text" rows="10" cols="90" size="50" placeholder="Visita a amigo." maxlength="700"></textarea></label>
+            <label><h6>Motivo:</h6><textarea  name="fmotivo" type="text" rows="10" cols="85" size="45" placeholder="Visita a amigo." maxlength="500"></textarea></label>
         </div>
         <div class="botao_confirmarcancelar">
             <form name="formconfirmar" action="/action_page_post.php" method="post">
